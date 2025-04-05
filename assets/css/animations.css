@@ -1,0 +1,60 @@
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes glowingLineAnimation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; transform: scale(0.95); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+    100% { opacity: 0.5; transform: scale(0.95); }
+}
+
+/* Animation applied elements */
+.hero-logo {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.hero-intro-wrapper {
+    animation: slideUp 0.8s ease-out;
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+.typing {
+    width: fit-content;
+    animation: typing 3.5s steps(40, end);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.glowing-line {
+    animation: glowingLineAnimation 3s infinite linear;
+}
