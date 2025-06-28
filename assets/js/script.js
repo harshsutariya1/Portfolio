@@ -197,4 +197,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Run once on load
     animateOnScroll();
+
+    // Scroll to top button
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
 });
